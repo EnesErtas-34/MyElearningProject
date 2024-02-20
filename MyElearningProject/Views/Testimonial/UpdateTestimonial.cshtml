@@ -1,0 +1,33 @@
+﻿@model MyElearningProject.DAL.Entities.Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Referans Güncelleme Sayfası</h2>
+<form method="post">
+    <input type="hidden" name="TestimonialID" value="@Model.TestimonialID" />
+    <br />
+    <label>Referans Ad Soyadı</label>
+    <input type="text" name="NameSurname" value="@Model.NameSurname" class="form-control" />
+    <br /><br />
+    <label>Başlık</label>
+    <input type="text" name="Title" value="@Model.Title" class="form-control" />
+    <br /><br />
+    <label>Referans Görseli</label>
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" />
+    <br /><br />
+    <label>Referans Yorum</label>
+    <input type="text" name="Comment" value="@Model.Comment" class="form-control" />
+    <br /><br />
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="Status" checked="@Model.Status" value="true" id="status">
+        <label class="form-check-label" for="status">Durum</label>
+    </div>
+    
+    <br /><br />
+    <button class="btn btn-primary">Referansı Güncelle</button>
+</form>
+
+
+
