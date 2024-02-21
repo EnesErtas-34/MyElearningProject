@@ -1,0 +1,43 @@
+﻿@model List<MyElearningProject.DAL.Entities.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+<div class="col-12">
+    <div class="card">
+        <div class="card-block">
+            Hakkımızda Listesi
+            <br />
+            <table class="table table-bordered">
+                <tr>
+                    <th>#</th>
+                    <th>Başlık</th>
+                    <th>Açıklama</th>
+                    <th>Görsel</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+
+                </tr>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <td>@count</td>
+                        <td>@item.Title</td>
+                        <td>@item.Description</td>
+                        <td><img src="@item.ImageUrl" style="height:50px; width:60px; border-radius:50%" /></td>
+                        <td><a href="/About/DeleteAbout/@item.AboutID" class="btn btn-outline-danger">Sil</a></td>
+                        <td><a href="/About/UpdateAbout/@item.AboutID" class="btn btn-outline-success">Güncelle</a></td>
+
+                    </tr>
+                }
+            </table>
+            <a href="/About/AddAbout/" class="btn btn-outline-primary">Yeni Hakkımızda Alanı Girişi</a>
+        </div>
+    </div>
+</div>
+</div>
+

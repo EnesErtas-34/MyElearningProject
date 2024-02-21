@@ -1,0 +1,23 @@
+﻿@model MyElearningProject.DAL.Entities.AboutFeature
+@{
+    ViewBag.Title = "AddAboutFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Alan Girişi</h2>
+<form method="post">
+    <br />
+    <label>İkon</label>
+    <input type="text" name="icon" class="form-control" />
+    <br /><br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    <br /><br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" />
+    <br /><br />
+    <button class="btn btn-primary">Alanı Kaydet</button>
+</form>
+
+
+

@@ -1,0 +1,42 @@
+﻿@model List<MyElearningProject.DAL.Entities.Address>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Adres Listesi
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Adres</th>
+                        <th>Telefon</th>
+                        <th>Mail</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.AddressOfice</td>
+                            <td>@item.Phone</td>
+                            <td>@item.Email</td>
+                            <td><a href="/Address/DeleteAddress/@item.AddressID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Address/UpdateAddress/@item.AddressID" class="btn btn-outline-success">Güncelle</a></td>
+
+                        </tr>
+                    }
+                </table>
+                <a href="/Address/AddAddress/" class="btn btn-outline-primary">Yeni Adres Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>

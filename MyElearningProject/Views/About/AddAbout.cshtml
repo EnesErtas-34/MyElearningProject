@@ -1,0 +1,21 @@
+﻿@model MyElearningProject.DAL.Entities.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Hakkımızda Alanı Girişi</h2>
+<form method="post">
+    <br />
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" />
+    <br /><br />
+    <label>Açıklama</label>
+    <input type="text" name="Description" class="form-control" />
+    <br /><br />
+    <label>Görsel</label>
+    <input type="text" name="ImageUrl" class="form-control" />
+    <br /><br />
+    <button class="btn btn-primary">Alanı Kaydet</button>
+</form>
+

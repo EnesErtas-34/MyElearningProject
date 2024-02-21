@@ -1,0 +1,42 @@
+﻿@model List<MyElearningProject.DAL.Entities.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Mesaj Listesi
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Ad Soyad</th>
+                        <th>Mail</th>
+                        <th>Konu</th>
+                        <th>Mesaj</th>
+                        <th>Sil</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.NameSurname</td>
+                            <td>@item.Email</td>
+                            <td>@item.Subject</td>
+                            <td>@item.Content</td>
+                            <td><a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-outline-danger">Sil</a></td>
+                           
+
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
