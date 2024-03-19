@@ -23,6 +23,7 @@ namespace MyElearningProject.DAL.Context
 		public DbSet<Review> Reviews { get; set; }
 		public DbSet<Process> Processes { get; set; }
 		public DbSet<Admin> Admins { get; set; }
+		public DbSet<CourseWatchList> CourseWatchLists { get; set; }
 		
 	}
 }
