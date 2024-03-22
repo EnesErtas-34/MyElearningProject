@@ -156,6 +156,7 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\StudentAdminLayoutController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentProfileController.cs" />
     <Compile Include="Controllers\StudentSettingsController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
@@ -1244,6 +1245,14 @@
     <Content Include="Views\StudentAdminLayout\PartialFooter.cshtml" />
     <Content Include="Views\StudentAdminLayout\PartialScripts.cshtml" />
     <Content Include="Views\StudentSettings\Index.cshtml" />
+    <Content Include="Views\StudentProfile\Index.cshtml" />
+    <Content Include="Views\StudentProfile\StudentInformationPartial.cshtml" />
+    <Content Include="Views\StudentProfile\StudentCommentList.cshtml" />
+    <Content Include="Views\StudentProfile\StudentProfilePartial.cshtml" />
+    <Content Include="Views\StudentProfile\MyCourseList.cshtml" />
+    <Content Include="Views\StudentProfile\WatchCourse.cshtml" />
+    <Content Include="Views\StudentProfile\RewievCourse.cshtml" />
+    <Content Include="Views\StudentProfile\StudentCourseBuy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

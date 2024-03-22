@@ -27,7 +27,7 @@ namespace MyElearningProject.Controllers
                 FormsAuthentication.SetAuthCookie(values.Email, false);
                 Session["CurrentMail"] = values.Email;
                 Session.Timeout = 60;
-                return RedirectToAction("Index", "Profile");
+                return RedirectToAction("Index", "StudentProfile");
             }
             return View();
         }
