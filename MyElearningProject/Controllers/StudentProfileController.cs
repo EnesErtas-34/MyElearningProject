@@ -1,6 +1,5 @@
 ﻿using MyElearningProject.DAL.Context;
 using MyElearningProject.DAL.Entities;
-using MyElearningProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

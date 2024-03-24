@@ -138,11 +138,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AboutFeatureController.cs" />
+    <Compile Include="Controllers\AboutPageController.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactPageController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\CoursePageController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\DefaultFeatureController.cs" />
     <Compile Include="Controllers\DefaultLayoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAdminLayoutController.cs" />
@@ -169,11 +173,13 @@
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\CourseWatchList.cs" />
+    <Compile Include="DAL\Entities\DefaultFeature.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
     <Compile Include="DAL\Entities\Message.cs" />
     <Compile Include="DAL\Entities\Process.cs" />
     <Compile Include="DAL\Entities\Review.cs" />
     <Compile Include="DAL\Entities\Student.cs" />
+    <Compile Include="DAL\Entities\Subscribe.cs" />
     <Compile Include="DAL\Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -261,6 +267,14 @@
     <Compile Include="Migrations\202403191759375_mig_add_coursewatchlist.cs" />
     <Compile Include="Migrations\202403191759375_mig_add_coursewatchlist.designer.cs">
       <DependentUpon>202403191759375_mig_add_coursewatchlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403231218575_mig_add_defaultfeature.cs" />
+    <Compile Include="Migrations\202403231218575_mig_add_defaultfeature.designer.cs">
+      <DependentUpon>202403231218575_mig_add_defaultfeature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403241236578_mig_add_subscribe.cs" />
+    <Compile Include="Migrations\202403241236578_mig_add_subscribe.designer.cs">
+      <DependentUpon>202403241236578_mig_add_subscribe.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1253,6 +1267,19 @@
     <Content Include="Views\StudentProfile\WatchCourse.cshtml" />
     <Content Include="Views\StudentProfile\RewievCourse.cshtml" />
     <Content Include="Views\StudentProfile\StudentCourseBuy.cshtml" />
+    <Content Include="Views\DefaultFeature\Index.cshtml" />
+    <Content Include="Views\DefaultFeature\AddDefaultFeature.cshtml" />
+    <Content Include="Views\DefaultFeature\UpdateDefaultFeature.cshtml" />
+    <Content Include="Views\Default\Subscribe.cshtml" />
+    <Content Include="Views\AboutPage\Index.cshtml" />
+    <Content Include="Views\AboutPage\PagePartial.cshtml" />
+    <Content Include="Views\CoursePage\Index.cshtml" />
+    <Content Include="Views\CoursePage\CategoryPartial.cshtml" />
+    <Content Include="Views\CoursePage\CoursePartial.cshtml" />
+    <Content Include="Views\ContactPage\Index.cshtml" />
+    <Content Include="Views\ContactPage\ContactUsPartial.cshtml" />
+    <Content Include="Views\ContactPage\SendMessage.cshtml" />
+    <Content Include="Views\ContactPage\ContactPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1334,6 +1361,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403191759375_mig_add_coursewatchlist.resx">
       <DependentUpon>202403191759375_mig_add_coursewatchlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403231218575_mig_add_defaultfeature.resx">
+      <DependentUpon>202403231218575_mig_add_defaultfeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403241236578_mig_add_subscribe.resx">
+      <DependentUpon>202403241236578_mig_add_subscribe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyElearningProject.DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace MyElearningProject.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        // GET: AdminLayout
+        ELearningContext context = new ELearningContext();
         public ActionResult Index()
         {
             return View();
@@ -27,6 +28,9 @@ namespace MyElearningProject.Controllers
         }
         public PartialViewResult PartialNavbar()
         {
+            string value = Session["CurrentMail"].ToString();
+            ViewBag.adminUserName = value;
+            int id = context.Admins.Where(x => x.Username == value).Select(y => y.AdminID).FirstOrDefault();
             return PartialView();
         }
         public PartialViewResult PartialRowPageTitle()

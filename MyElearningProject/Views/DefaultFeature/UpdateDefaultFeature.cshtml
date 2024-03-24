@@ -1,0 +1,31 @@
+﻿@model MyElearningProject.DAL.Entities.DefaultFeature
+@{
+    ViewBag.Title = "UpdateDefaultFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2> Alan Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.DefaultFeatureID)
+    <label>Başlık Giriniz</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br /><br />
+    <label>Başlık2 Giriniz</label>
+    @Html.TextBoxFor(x => x.Title2, new { @class = "form-control" })
+    <br /><br />
+    <label>Açıklama Giriniz</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br /><br />
+    <label>Açıklama2 Giriniz</label>
+    @Html.TextBoxFor(x => x.Description2, new { @class = "form-control" })
+    <br /><br />
+    <label>Görsel Giriniz</label>
+    @Html.TextBoxFor(x => x.ImageURL, new { @class = "form-control" })
+    <br /><br />
+    <label>Görsel2 Giriniz</label>
+    @Html.TextBoxFor(x => x.ImageURL2, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Alanı Güncelle</button>
+
+

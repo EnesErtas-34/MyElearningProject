@@ -1,0 +1,37 @@
+﻿@model List<MyElearningProject.DAL.Entities.Address>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <h5>Bilgiler</h5>
+        <p class="mb-4">Bizlere bu adresler üzerinden ulaşabilirsiniz.</p>
+        <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                <i class="fa fa-map-marker-alt text-white"></i>
+            </div>
+            <div class="ms-3">
+                <h5 class="text-primary">Ofis</h5>
+                <p class="mb-0">@item.AddressOfice</p>
+            </div>
+        </div>
+        <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                <i class="fa fa-phone-alt text-white"></i>
+            </div>
+            <div class="ms-3">
+                <h5 class="text-primary">Telefon</h5>
+                <p class="mb-0">@item.Phone</p>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                <i class="fa fa-envelope-open text-white"></i>
+            </div>
+            <div class="ms-3">
+                <h5 class="text-primary">Mail</h5>
+                <p class="mb-0">@item.Email</p>
+            </div>
+        </div>
+    </div>
+}
+

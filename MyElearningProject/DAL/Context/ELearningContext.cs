@@ -24,6 +24,8 @@ namespace MyElearningProject.DAL.Context
 		public DbSet<Process> Processes { get; set; }
 		public DbSet<Admin> Admins { get; set; }
 		public DbSet<CourseWatchList> CourseWatchLists { get; set; }
+		public DbSet<DefaultFeature> DefaultFeatures { get; set; }
+		public DbSet<Subscribe> Subscribes { get; set; }
 		
 	}
 }

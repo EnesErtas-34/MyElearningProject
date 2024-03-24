@@ -1,0 +1,29 @@
+﻿@model MyElearningProject.DAL.Entities.Subscribe
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<div class="col-lg-3 col-md-6">
+    <h4 class="text-white mb-3">E-Bülten</h4>
+    <p>Son çıkan kurslarımızı ilk siz öğrenin.</p>
+    <div class="position-relative mx-auto" style="max-width: 400px;">
+        <form method="post"  action="/Default/Subscribe/">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" name="Mail" placeholder="Email Adresiniz">
+            <button type="submit" onclick="subscribe()" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Kaydol</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function subscribe() {
+        Swal.fire({
+            title: 'Abone için mail adresiniz alındı.',
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonText: 'Tamam'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/Default/Index";
+            }
+        });
+    }
+</script>
